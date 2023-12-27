@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 9</title>
+</head>
+<body>
+  <script>
+    function simulateAsyncOperation(callback) {
+      setTimeout(function() {
+        let result = "Async operation completed.";
+        callback(result);
+      }, 2000);
+    }
+
+    // Example usage
+    simulateAsyncOperation(function(result) {
+      console.log(result);
+    });
+  </script>
+</body>
+</html>
