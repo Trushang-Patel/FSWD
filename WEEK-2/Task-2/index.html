@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-2</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+let firstData; 
+let secondData;
+
+function fetchFirstData() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("First Data");
+    }, 2000);
+  });
+}
+
+function fetchSecondData() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Second Data");
+    }, 2000);
+  });
+}
+
+function fetchThirdData() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Third Data");
+    }, 2000);
+  });
+}
+
+fetchFirstData()
+  .then((data) => {
+    firstData = data; 
+    return fetchSecondData();
+  })
+  .then((data) => {
+    secondData=data
+    return fetchThirdData()
+})
+  .then((thirdData) => {
+    console.log("Combined Result:", firstData, secondData, thirdData);
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
+
+</script>
+</html>

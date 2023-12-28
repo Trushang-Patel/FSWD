@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-6</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+async function fetchData1() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Data from FetchData1");
+    }, 2000);
+  });
+}
+
+async function fetchData2() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Data from FetchData2");
+    }, 2000);
+  });
+}
+
+async function fetchData3() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Data from FetchData3");
+    }, 2000);
+  });
+}
+
+async function parallelAsyncOperations() {
+  const results = await Promise.all([fetchData1(), fetchData2(), fetchData3()]);
+  console.log("Combined Result:", results);
+}
+
+ parallelAsyncOperations();
+
+</script>
+</html>
