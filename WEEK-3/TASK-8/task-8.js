@@ -46,7 +46,7 @@ const server = http.createServer((req, res) => {
 });
 
 // Listening on port 8080
-const PORT = 3000;
+const PORT = 8080;
 server.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
