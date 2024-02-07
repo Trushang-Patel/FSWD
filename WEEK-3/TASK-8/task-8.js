@@ -41,7 +41,7 @@ const server = http.createServer((req, res) => {
     }
   } else {
     res.writeHead(405, { 'Content-Type': 'text/plain' });
-    res.end('Method Not Allowed');
+    res.end('Method Not Allowed ');
   }
 });
 
