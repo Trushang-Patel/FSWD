@@ -58,6 +58,19 @@ app.get('/',(req,res)=>{
  });
  
  main();
+ app.get('/update', (req, res) => {
+   UserModel.updateOne({ User_name: 'Trushang Patel' }, { User_name: 'Trushang' })
+       .then(() => { console.log("Record Updated") })
+       .catch((err) => { console.log("Record not updated" + err) })
+   res.send("Record Updated");
+});
+
+app.get('/delete', (req, res) => {
+   UserModel.deleteOne({ User_name: 'Trushang' })
+       .then(() => { console.log("Record Deleted") })
+       .catch((err) => { console.log("Record not Deleted" + err) })
+   res.send("Record Deleted");
+});
 
  app.listen(port,()=>{
     console.log(`Example app listening on port ${port}`)
