@@ -6,7 +6,7 @@ port: 465,
 secure: true,
 auth: {
 user: "trushangpatel282@gmail.com",
-pass: "aqfzngcdkrimhzbu",
+pass: "Yourpassword",
 },
 });
 // Define the email content
