@@ -14,7 +14,7 @@ app.use(cors());
 app.use(json());
 
 // Connect to MongoDB
-connect('mongodb://localhost/mydatabase', {
+connect('mongodb+srv://admin:admin@cluster0.6dm1dio.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
